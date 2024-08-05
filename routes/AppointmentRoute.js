@@ -5,8 +5,8 @@ const Appointment = require("../models/Appointment/Appointment");
 // Create a new appointment
 router.post("/appointments", async (req, res) => {
   try {
-    const { trainer_id, user_id, date, time } = req.body;
-    const newAppointment = new Appointment({ trainer_id, user_id, date, time });
+    const { t_id, user_id, date, time } = req.body;
+    const newAppointment = new Appointment({ t_id, user_id, date, time });
     await newAppointment.save();
     res.status(201).send(newAppointment);
   } catch (error) {

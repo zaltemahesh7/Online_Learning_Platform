@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const appointmentSchema = new Schema(
   {
-    t_id: { type: Schema.Types.ObjectId, ref: "Trainer", required: true },
-    u_id: { type: Schema.Types.ObjectId, ref: "User", required: true }, // Assuming you have a User model
+    t_id: { type: Schema.Types.ObjectId, ref: "Trainer", required: true},
+    // u_id: { type: Schema.Types.ObjectId, ref: "User", required: true },
     date: { type: Date, required: true },
     time: { type: String, required: true },
   },

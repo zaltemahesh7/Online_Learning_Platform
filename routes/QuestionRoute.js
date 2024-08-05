@@ -44,7 +44,7 @@ router.get("/questions/course/:c_id", async (req, res) => {
 router.get("/questions/trainer/:t_id", async (req, res) => {
   try {
     const questions = await Question.find({ t_id: req.params.t_id })
-      .populate("c_id")
+      // .populate("c_id")
       .populate("t_id");
     res.status(200).send(questions);
   } catch (error) {
